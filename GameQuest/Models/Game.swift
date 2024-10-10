@@ -19,15 +19,16 @@ struct Games: Codable{
 struct Game: Codable, Hashable{
     var id: Int
     var title: String
-    var description: String
-    var thumbnail: String
-    var genre: String
-    var platform: String
-    var publisher: String
-    var developer: String
-    var release_date: String
+    var description: String?
+    var thumbnail: String?
+    var genre: String?
+    var platform: String?
+    var publisher: String?
+    var developer: String?
+    var release_date: String?
     
     enum CodingKeys: String, CodingKey{
-        case id, title, description, thumbnail, genre, platform, publisher, developer, release_date
+        case id, title, description, thumbnail, genre, platform, publisher, developer
+        case release_date = "release_date"
     }
 }
