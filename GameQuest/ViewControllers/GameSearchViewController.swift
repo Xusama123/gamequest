@@ -8,6 +8,8 @@
 import UIKit
 
 class GameSearchViewController: UIViewController {
+    
+    //MARK: Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
