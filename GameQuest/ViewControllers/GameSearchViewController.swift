@@ -28,12 +28,13 @@ class GameSearchViewController: UIViewController {
     
     //MARK: - Datasource Methods and properties
     lazy var tableDataSource = UITableViewDiffableDataSource<Section, Game>(tableView: tableView){
-        tableView, indexPath, itemIdentifier in
+        tableView, indexPath, game in
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as! GameTableViewCell
         
-        cell.gameTitle.text = itemIdentifier.title
-        cell.gamePublisher.text = itemIdentifier.publisher
-        cell.gameDate.text = itemIdentifier.release_date
+        cell.gameTitle.text = game.title
+        cell.gamePublisher.text = game.publisher
+        cell.gameDate.text = String(game.release_date?.prefix(4) ?? "")
+        self.fetchImages(forGame: game.thumbnail ?? "", forCell: cell)
         
         return cell
     }
@@ -81,6 +82,25 @@ class GameSearchViewController: UIViewController {
             }
         }
         gameTask.resume()
+    }
+    func fetchImages(forGame game: String, forCell cell: GameTableViewCell){
+        guard let imageUrl =  URL(string: game) else {
+            print("Can't make a url from \(game)")
+            return
+        }
+        
+        let imageFetchTask = URLSession.shared.downloadTask(with: imageUrl){
+            url, response, error in
+            
+            if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
+                
+                DispatchQueue.main.async {
+                    cell.gameImage.image = image
+                }
+            }
+            
+        }
+        imageFetchTask.resume()
     }
 
 
