@@ -83,6 +83,7 @@ class GameSearchViewController: UIViewController {
         }
         gameTask.resume()
     }
+    //function to fetch images from api and applying them to reusable cell
     func fetchImages(forGame game: String, forCell cell: GameTableViewCell){
         guard let imageUrl =  URL(string: game) else {
             print("Can't make a url from \(game)")
@@ -101,6 +102,21 @@ class GameSearchViewController: UIViewController {
             
         }
         imageFetchTask.resume()
+    }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+        let game = games[selectedIndexPath.row]
+        let destination = segue.destination as! DetailsViewController
+        destination.game = game
+        
+        guard let cell = tableView.cellForRow(at: selectedIndexPath) as? GameTableViewCell else {return}
+        let image = cell.gameImage.image
+        destination.passedImage = image
+
+        
     }
 
 
