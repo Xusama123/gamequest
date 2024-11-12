@@ -1,34 +1,37 @@
-//
-//  Game.swift
-//  GameQuest
-//
-//  Created by Usama Waked on 2024-10-10.
-//
-
 import Foundation
 
-
-enum Section{
+enum Section {
     case main
 }
 
-struct Games: Codable{
+struct Games: Codable {
     var results: [Game]
 }
 
-struct Game: Codable, Hashable{
+struct Game: Codable, Hashable {
     var id: Int
     var title: String
     var description: String?
     var thumbnail: String?
+    var short_description: String?
     var genre: String?
     var platform: String?
     var publisher: String?
     var developer: String?
     var release_date: String?
-    
-    enum CodingKeys: String, CodingKey{
-        case id, title, description, thumbnail, genre, platform, publisher, developer
-        case release_date = "release_date"
-    }
+    var screenshots: [Screenshot]?
+    var minimum_system_requirements: MinimumSystemRequirements?
+}
+
+struct Screenshot: Codable, Hashable {
+    var id: Int
+    var image: String?
+}
+
+struct MinimumSystemRequirements: Codable, Hashable {
+    var os: String?
+    var processor: String?
+    var memory: String?
+    var graphics: String?
+    var storage: String?
 }
