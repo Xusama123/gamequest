@@ -118,7 +118,37 @@ class GameSearchViewController: UIViewController {
 
         
     }
+    
+    //MARK: Actions
+    
+    //each button changes the url to specific keyword and updates table
+    @IBAction func shooterButton(_ sender: Any) {
+        if let bookURL = createGameURL(from: "shooter"){
+            fetchGames(from: bookURL)
+        }
+    }
+    @IBAction func strategyButton(_ sender: Any) {
+        if let bookURL = createGameURL(from: "strategy"){
+            fetchGames(from: bookURL)
+        }
+    }
+    @IBAction func racingButton(_ sender: Any) {
+        if let bookURL = createGameURL(from: "racing"){
+            fetchGames(from: bookURL)
+        }
+    }
 
+    @IBAction func horrorButton(_ sender: Any) {
+        if let bookURL = createGameURL(from: "horror"){
+            fetchGames(from: bookURL)
+        }
+    }
+    @IBAction func actionButton(_ sender: Any) {
+        if let bookURL = createGameURL(from: "action"){
+            fetchGames(from: bookURL)
+        }
+    }
+    
 
 
 }

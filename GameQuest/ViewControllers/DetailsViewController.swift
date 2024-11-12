@@ -36,7 +36,6 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         loadUI()
         // Do any additional setup after loading the view.
-        print(game)
     }
     
     //Load UI

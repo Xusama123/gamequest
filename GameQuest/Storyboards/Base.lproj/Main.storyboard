@@ -22,47 +22,62 @@
                                 <rect key="frame" x="0.0" y="88" width="393" height="59.333333333333343"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lYA-H8-ach">
-                                        <rect key="frame" x="0.0" y="0.0" width="485" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="621.66666666666663" height="34.333333333333336"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUT-Ef-rBM">
-                                                <rect key="frame" x="0.0" y="0.0" width="89" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Shooter">
+                                                <buttonConfiguration key="configuration" style="gray" title="🔫 Shooter">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="Secondary Gray"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="shooterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URv-nq-5Be"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdX-DJ-uz9">
-                                                <rect key="frame" x="99" y="0.0" width="89" height="34.333333333333336"/>
+                                                <rect key="frame" x="126.33333333333334" y="0.0" width="116.33333333333334" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Strategy">
+                                                <buttonConfiguration key="configuration" style="gray" title="🎯 Strategy">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="Secondary Gray"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="strategyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEf-1P-dA2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFW-ih-zYY">
-                                                <rect key="frame" x="198" y="0.0" width="89" height="34.333333333333336"/>
+                                                <rect key="frame" x="252.66666666666666" y="0.0" width="116.33333333333334" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Racing">
+                                                <buttonConfiguration key="configuration" style="gray" title="🏁 Racing">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="Secondary Gray"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="racingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HhJ-eF-v93"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTJ-c8-IFR">
-                                                <rect key="frame" x="297" y="0.0" width="89" height="34.333333333333336"/>
+                                                <rect key="frame" x="379" y="0.0" width="116.33333333333331" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="War">
+                                                <buttonConfiguration key="configuration" style="gray" title="👻 Horror">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="Secondary Gray"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="horrorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZf-De-5ht"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7D-gV-Vtj">
-                                                <rect key="frame" x="396" y="0.0" width="89" height="34.333333333333336"/>
+                                                <rect key="frame" x="505.33333333333331" y="0.0" width="116.33333333333331" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Action">
+                                                <buttonConfiguration key="configuration" style="gray" title="💥 Action">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="Secondary Gray"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MlS-dL-jRY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
