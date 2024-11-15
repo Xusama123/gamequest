@@ -25,13 +25,13 @@ struct Game: Codable, Hashable {
 
 struct Screenshot: Codable, Hashable {
     var id: Int
-    var image: String?
+    var image: String
 }
 
 struct MinimumSystemRequirements: Codable, Hashable {
-    var os: String?
-    var processor: String?
-    var memory: String?
-    var graphics: String?
-    var storage: String?
+    var os: String
+    var processor: String
+    var memory: String
+    var graphics: String
+    var storage: String
 }
